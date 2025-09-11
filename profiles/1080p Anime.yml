@@ -40,8 +40,12 @@ custom_formats:
   score: 35000
 
 # Language/Audio priorities (English dub preference)
+- name: Anime English Dual Audio
+  score: 25000   # Highest priority - English + Japanese specifically
+- name: English Audio
+  score: 22000   # Any release with English audio
 - name: Anime Dual Audio
-  score: 20000   # Highest - English + Japanese
+  score: 18000   # General dual audio (lower priority as might not include English)
 - name: Dubs Only
   score: 15000   # English dub only
 - name: 10bit
@@ -92,6 +96,8 @@ custom_formats:
   score: 400
 
 # Avoid these (block 2160p and unwanted content)
+- name: Japanese Only
+  score: -5000   # Discourage Japanese-only releases
 - name: 2160p
   score: -999999  # Block all 2160p
 - name: UHD Bluray

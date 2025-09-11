@@ -1,0 +1,26 @@
+name: Japanese Only
+description: Releases that only contain Japanese audio (no English)
+tags:
+- Audio
+- Language
+- Japanese
+conditions:
+- name: Japanese Only Audio
+  negate: false
+  required: true
+  pattern: jp(?:n|anese).?only|(?<!dual.?)(?<!multi.?)jp(?:n|anese)(?!.*eng)(?!.*english)(?!.*dub)
+  type: release_title
+- name: Not Dual Audio
+  negate: true
+  required: false
+  pattern: dual.?audio|multi.?audio|eng.*jpn|jpn.*eng
+  type: release_title
+tests:
+- input: "Anime Title 1080p BluRay x264 Japanese Only"
+  expected: true
+- input: "[Group] Anime - 01 (1080p) JPN Audio"
+  expected: true
+- input: "[Group] Anime - 01 (1080p) [Dual Audio ENG+JPN]"
+  expected: false
+- input: "Anime Movie 2023 1080p BluRay English Dub"
+  expected: false

@@ -1,0 +1,26 @@
+name: English Audio
+description: Releases that contain English audio track (including dubs and dual audio)
+tags:
+- Audio
+- Language
+- English
+conditions:
+- name: English Audio Track
+  negate: false
+  required: true
+  pattern: english|eng(?!\w)|dub|dual.?audio|multi.?audio
+  type: release_title
+- name: Not Japanese Only
+  negate: true
+  required: false
+  pattern: ^(?!.*english)(?!.*eng(?!\w))(?!.*dub).*jp(?:n|anese).*only
+  type: release_title
+tests:
+- input: "Anime Title 1080p BluRay x264 English Dub"
+  expected: true
+- input: "[Group] Anime - 01 (1080p) [Dual Audio ENG+JPN]"
+  expected: true
+- input: "Anime Movie 2023 1080p WEB-DL Multi Audio"
+  expected: true
+- input: "Anime Series S01 1080p BluRay Japanese Only"
+  expected: false

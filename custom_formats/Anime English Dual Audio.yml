@@ -1,0 +1,27 @@
+name: Anime English Dual Audio
+description: Anime releases with both English and Japanese audio tracks specifically
+tags:
+- Anime
+- Audio
+- Language
+- English
+conditions:
+- name: English Dual Audio
+  negate: false
+  required: true
+  pattern: (dual.?audio|multi.?audio).*eng|eng.*(dual.?audio|multi.?audio)|(dual.?audio|multi.?audio).*(english|jpn.*eng|eng.*jpn)|(english|jpn.*eng|eng.*jpn).*(dual.?audio|multi.?audio)
+  type: release_title
+- name: Anime Context
+  negate: false
+  required: false
+  pattern: anime|ANiME
+  type: release_title
+tests:
+- input: "[SubsPlease] Anime Title - 01 (1080p) [Dual Audio] [ENG+JPN]"
+  expected: true
+- input: "Anime Movie (2023) 1080p BluRay x264 Dual Audio [English + Japanese]"
+  expected: true
+- input: "[Group] Anime Series S01E01 1080p WEB-DL Dual Audio ENG JPN x264"
+  expected: true
+- input: "Anime Title 2023 1080p BluRay Dual Audio Korean Japanese"
+  expected: false
