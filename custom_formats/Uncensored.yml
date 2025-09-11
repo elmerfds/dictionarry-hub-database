@@ -3,10 +3,11 @@ description: Uncensored anime releases
 tags:
 - Anime
 - Content
-conditions:
+specifications:
 - name: Uncensored
+  implementation: ReleaseTitleSpecification
   negate: false
-  pattern: uncensored|uncut
   required: true
-  type: release_title
+  fields:
+    value: uncensored|uncut
 tests: []

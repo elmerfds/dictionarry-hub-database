@@ -3,10 +3,11 @@ description: Third tier SeaDex muxers for anime BluRay releases
 tags:
 - Anime
 - BluRay
-conditions:
+specifications:
 - name: Anime BD Tier 03
+  implementation: ReleaseTitleSpecification
   negate: false
-  pattern: kametsu|ANThELIa|YURASUKA|bonkai77|ONIBAKU|3xR|HONE|Lupin the Nerd|Scyrous
   required: true
-  type: release_title
+  fields:
+    value: AOC|AROMA|BOLS|BTM|CLASSiCALHD|CREATiVE24|DepraveD|FGT|Flights|jennaortegaUHD|KC|MeGusta|MgB|NAHOM|NhaNc3|NoGroup|OEPlus|PiRaTeS|PSA|RARGB|SasukeducK|SHD|ShieldBearer|STUTTERSHIT|tarunk9c|TEKNO3D|Telly|TvR|VECTOR|VisionXpert|x0r|YIFY|YTS
 tests: []

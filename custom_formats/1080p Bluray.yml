@@ -2,15 +2,17 @@ name: 1080p Bluray
 description: Matches 1080p Blurays that are NOT remuxes
 tags:
 - Source
-conditions:
+specifications:
 - name: 1080p
+  implementation: ResolutionSpecification
   negate: false
   required: true
-  resolution: 1080p
-  type: resolution
+  fields:
+    value: 1080p
 - name: Bluray
+  implementation: SourceSpecification
   negate: false
   required: true
-  source: bluray
-  type: source
+  fields:
+    value: 1
 tests: []

@@ -4,15 +4,17 @@ tags:
 - Anime
 - Audio
 - Language
-conditions:
+specifications:
 - name: Dual Audio
+  implementation: ReleaseTitleSpecification
   negate: false
-  pattern: dual.?audio|multi.?audio|eng.*jpn|jpn.*eng|english.*japanese|japanese.*english
   required: true
-  type: release_title
+  fields:
+    value: dual.?audio|multi.?audio|eng.*jpn|jpn.*eng|english.*japanese|japanese.*english
 - name: Anime Context
+  implementation: ReleaseTitleSpecification
   negate: false
-  pattern: anime|ANiME
   required: false
-  type: release_title
+  fields:
+    value: anime|ANiME
 tests: []

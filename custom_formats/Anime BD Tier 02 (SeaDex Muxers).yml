@@ -3,10 +3,11 @@ description: Second tier SeaDex muxers for anime BluRay releases
 tags:
 - Anime
 - Release Group
-conditions:
+specifications:
 - name: Anime BD Tier 02
+  implementation: ReleaseTitleSpecification
   negate: false
-  pattern: Akihito|ANK-Raws|BBT|BlurayDesuYo|Cleo|Coalgirls-v2|CTR|DragsterPS|E-N-D|Hi10|KamiFS|Kira|LowPower-Raws|Moozzi2|naiyas|NoMercy|QP|ReinForce|SallySubs|SCY|ShallowSubs|Shou|TaigaSubs|U2|VCB-Studio|WhyNot|Yuki-Asuna|ZR|μtw
   required: true
-  type: release_title
+  fields:
+    value: Akihito|ANK-Raws|BBT|BlurayDesuYo|Cleo|Coalgirls-v2|CTR|DragsterPS|E-N-D|Hi10|KamiFS|Kira|LowPower-Raws|Moozzi2|naiyas|NoMercy|QP|ReinForce|SallySubs|SCY|ShallowSubs|Shou|TaigaSubs|U2|VCB-Studio|WhyNot|Yuki-Asuna|ZR|μtw
 tests: []

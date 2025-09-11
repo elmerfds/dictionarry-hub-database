@@ -3,10 +3,11 @@ description: Crunchyroll streaming service releases
 tags:
 - Anime
 - Streaming
-conditions:
+specifications:
 - name: Crunchyroll
+  implementation: ReleaseTitleSpecification
   negate: false
-  pattern: crunchyroll|CR|crunchy
   required: true
-  type: release_title
+  fields:
+    value: crunchyroll|CR|crunchy
 tests: []

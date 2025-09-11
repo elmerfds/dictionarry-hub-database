@@ -4,15 +4,11 @@ tags:
 - Anime
 - Audio
 - Language
-conditions:
+specifications:
 - name: Dubs Only
+  implementation: ReleaseTitleSpecification
   negate: false
-  pattern: dub.?only|english.?dub|eng.?dub
   required: true
-  type: release_title
-- name: Not Dual Audio
-  negate: true
-  pattern: dual.?audio|multi.?audio|jpn|japanese
-  required: true
-  type: release_title
+  fields:
+    value: dub.?only|english.?dub|eng.?dub
 tests: []

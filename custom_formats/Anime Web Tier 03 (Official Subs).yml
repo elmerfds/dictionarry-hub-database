@@ -4,10 +4,11 @@ tags:
 - Anime
 - WEB
 - Official
-conditions:
+specifications:
 - name: Anime Web Tier 03
+  implementation: ReleaseTitleSpecification
   negate: false
-  pattern: Funimation|AnimeLab|wakanim|HIDIVE|VRV|Aniplex
   required: true
-  type: release_title
+  fields:
+    value: crunchyroll|CR|crunchy
 tests: []
