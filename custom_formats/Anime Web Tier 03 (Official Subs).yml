@@ -4,11 +4,10 @@ tags:
 - Anime
 - WEB
 - Official
-specifications:
+conditions:
 - name: Anime Web Tier 03
-  implementation: ReleaseTitleSpecification
   negate: false
   required: true
-  fields:
-    value: crunchyroll|CR|crunchy
+  pattern: crunchyroll|CR|crunchy
+  type: release_title
 tests: []

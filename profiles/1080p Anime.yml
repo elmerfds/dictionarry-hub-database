@@ -136,27 +136,23 @@ custom_formats_sonarr:
   score: 50
 
 qualities:
-- id: -12
-  name: Anime 1080p Max
-  description: Anime releases with 1080p maximum resolution, English dub priority, Bluray final upgrade
-  qualities:
-  - id: 9    # Bluray-1080p (final upgrade)
-    name: Bluray-1080p
-  - id: 3    # WEBDL-1080p  
-    name: WEBDL-1080p
-  - id: 16   # WEBRip-1080p
-    name: WEBRip-1080p
-  - id: 6    # Bluray-720p (for older content)
-    name: Bluray-720p
-  - id: 2    # WEBDL-720p
-    name: WEBDL-720p
-  - id: 14   # WEBRip-720p
-    name: WEBRip-720p
+- id: 7    # Bluray-1080p (final upgrade)
+  name: Bluray-1080p
+- id: 3    # WEBDL-1080p  
+  name: WEBDL-1080p
+- id: 15   # WEBRip-1080p
+  name: WEBRip-1080p
+- id: 6    # Bluray-720p (for older content)
+  name: Bluray-720p
+- id: 2    # WEBDL-720p
+  name: WEBDL-720p
+- id: 14   # WEBRip-720p
+  name: WEBRip-720p
 
-cutoff: 9  # Bluray-1080p (final upgrade target)
+cutoff: 7  # Bluray-1080p (final upgrade target)
 
 upgrade_until:
-  id: 9    # Bluray-1080p (final upgrade target)
+  id: 7    # Bluray-1080p (final upgrade target)
   name: Bluray-1080p
   description: Final upgrade target for anime content
 

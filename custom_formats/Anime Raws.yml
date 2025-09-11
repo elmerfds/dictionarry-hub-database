@@ -3,11 +3,10 @@ description: Raw anime releases without subtitles
 tags:
 - Anime
 - Raw
-specifications:
+conditions:
 - name: Anime Raws
-  implementation: ReleaseTitleSpecification
   negate: false
   required: true
-  fields:
-    value: raw|raws|RAW|RAWS
+  pattern: raw|raws|RAW|RAWS
+  type: release_title
 tests: []

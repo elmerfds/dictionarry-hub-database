@@ -3,11 +3,10 @@ description: Top tier anime web muxers and encoders
 tags:
 - Anime
 - WEB
-specifications:
+conditions:
 - name: Anime Web Tier 01
-  implementation: ReleaseTitleSpecification
   negate: false
   required: true
-  fields:
-    value: SubsPlease|Erai-raws|HorribleSubs|Yameii|kBaraka
+  pattern: SubsPlease|Erai-raws|HorribleSubs|Yameii|kBaraka
+  type: release_title
 tests: []

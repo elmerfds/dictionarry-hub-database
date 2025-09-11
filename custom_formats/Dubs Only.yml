@@ -4,11 +4,10 @@ tags:
 - Anime
 - Audio
 - Language
-specifications:
+conditions:
 - name: Dubs Only
-  implementation: ReleaseTitleSpecification
   negate: false
   required: true
-  fields:
-    value: dub.?only|english.?dub|eng.?dub
+  pattern: dub.?only|english.?dub|eng.?dub
+  type: release_title
 tests: []

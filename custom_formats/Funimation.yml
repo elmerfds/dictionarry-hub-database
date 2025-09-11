@@ -3,11 +3,10 @@ description: Funimation streaming service releases (now part of Crunchyroll)
 tags:
 - Anime
 - Streaming
-specifications:
+conditions:
 - name: Funimation
-  implementation: ReleaseTitleSpecification
   negate: false
   required: true
-  fields:
-    value: funimation|FUNI|funi
+  pattern: funimation|FUNI|funi
+  type: release_title
 tests: []
