@@ -6,6 +6,6 @@ tags:
 conditions:
 - name: Crunchyroll
   negate: false
-  pattern: \b(crunchyroll|CR|crunchy)\b
+  pattern: crunchyroll|CR|crunchy
   required: true
   type: release_title

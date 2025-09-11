@@ -6,6 +6,6 @@ tags:
 conditions:
 - name: Uncensored
   negate: false
-  pattern: \b(uncensored|uncut)\b
+  pattern: uncensored|uncut
   required: true
   type: release_title

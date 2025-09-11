@@ -6,11 +6,11 @@ tags:
 conditions:
 - name: Anime Raws
   negate: false
-  pattern: \b(raw|raws|RAW|RAWS)\b
+  pattern: raw|raws|RAW|RAWS
   required: true
   type: release_title
 - name: Not Fansub
   negate: true
-  pattern: \b(fansub|fansubbed|softsub|hardsub)\b
+  pattern: fansub|fansubbed|softsub|hardsub
   required: true
   type: release_title

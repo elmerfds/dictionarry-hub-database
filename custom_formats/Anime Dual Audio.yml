@@ -7,11 +7,11 @@ tags:
 conditions:
 - name: Dual Audio
   negate: false
-  pattern: \b(dual.?audio|multi.?audio|eng.*jpn|jpn.*eng|english.*japanese|japanese.*english)\b
+  pattern: dual.?audio|multi.?audio|eng.*jpn|jpn.*eng|english.*japanese|japanese.*english
   required: true
   type: release_title
 - name: Anime Context
   negate: false
-  pattern: \b(anime|ANiME)\b
+  pattern: anime|ANiME
   required: false
   type: release_title

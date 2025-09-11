@@ -6,6 +6,6 @@ tags:
 conditions:
 - name: Anime BD Tier 03
   negate: false
-  pattern: \b(kametsu|ANThELIa|YURASUKA|bonkai77|ONIBAKU|3xR|HONE|Lupin the Nerd|Scyrous)\b
+  pattern: kametsu|ANThELIa|YURASUKA|bonkai77|ONIBAKU|3xR|HONE|Lupin the Nerd|Scyrous
   required: true
   type: release_title

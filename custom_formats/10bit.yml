@@ -6,6 +6,6 @@ tags:
 conditions:
 - name: 10bit
   negate: false
-  pattern: \b(10.?bit|10bit|Hi10|Hi10P)\b
+  pattern: 10.?bit|10bit|Hi10|Hi10P
   required: true
   type: release_title

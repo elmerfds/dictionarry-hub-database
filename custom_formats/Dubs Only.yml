@@ -7,11 +7,11 @@ tags:
 conditions:
 - name: Dubs Only
   negate: false
-  pattern: \b(dub.?only|english.?dub|eng.?dub)\b
+  pattern: dub.?only|english.?dub|eng.?dub
   required: true
   type: release_title
 - name: Not Dual Audio
   negate: true
-  pattern: \b(dual.?audio|multi.?audio|jpn|japanese)\b
+  pattern: dual.?audio|multi.?audio|jpn|japanese
   required: true
   type: release_title

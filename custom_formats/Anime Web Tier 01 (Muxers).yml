@@ -6,6 +6,6 @@ tags:
 conditions:
 - name: Anime Web Tier 01
   negate: false
-  pattern: \b(SubsPlease|Erai-raws|HorribleSubs|Yameii|kBaraka)\b
+  pattern: SubsPlease|Erai-raws|HorribleSubs|Yameii|kBaraka
   required: true
   type: release_title

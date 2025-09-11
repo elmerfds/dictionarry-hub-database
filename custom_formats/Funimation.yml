@@ -6,6 +6,6 @@ tags:
 conditions:
 - name: Funimation
   negate: false
-  pattern: \b(funimation|FUNI|funi)\b
+  pattern: funimation|FUNI|funi
   required: true
   type: release_title
