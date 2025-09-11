@@ -9,4 +9,3 @@ conditions:
   pattern: \b(uncensored|uncut)\b
   required: true
   type: release_title
-tests: []

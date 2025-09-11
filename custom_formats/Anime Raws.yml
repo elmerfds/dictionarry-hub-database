@@ -14,4 +14,3 @@ conditions:
   pattern: \b(fansub|fansubbed|softsub|hardsub)\b
   required: true
   type: release_title
-tests: []

@@ -4,9 +4,9 @@ tags:
 - Anime
 - WEB
 - Official
-specifications:
+conditions:
 - name: Anime Web Tier 03
-  required: true
   negate: false
-  fields:
-    value: \b(Funimation|AnimeLab|wakanim|HIDIVE|VRV|Aniplex)\b
+  pattern: \b(Funimation|AnimeLab|wakanim|HIDIVE|VRV|Aniplex)\b
+  required: true
+  type: release_title

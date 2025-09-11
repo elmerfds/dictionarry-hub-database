@@ -153,6 +153,8 @@ qualities:
   - id: 15   # WEBRip-720p
     name: WEBRip-720p
 
+cutoff: 10  # Bluray-1080p (final upgrade target)
+
 upgrade_until:
   id: 10    # Bluray-1080p (final upgrade target)
   name: Bluray-1080p

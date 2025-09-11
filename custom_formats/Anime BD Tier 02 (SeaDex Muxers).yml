@@ -9,4 +9,3 @@ conditions:
   pattern: \b(Akihito|ANK-Raws|BBT|BlurayDesuYo|Cleo|Coalgirls-v2|CTR|DragsterPS|E-N-D|Hi10|Kametsu|KamiFS|Kira|LowPower-Raws|Moozzi2|naiyas|NoMercy|QP|ReinForce|SallySubs|SCY|ShallowSubs|Shou|TaigaSubs|U2|VCB-Studio|WhyNot|Yuki-Asuna|ZR|μtw|Coalgirls|Kametsu|moozzi2|Cleo|Beatrice-Raws)\b
   required: true
   type: release_title
-tests: []

@@ -9,4 +9,3 @@ conditions:
   pattern: \b(10.?bit|10bit|Hi10|Hi10P)\b
   required: true
   type: release_title
-tests: []

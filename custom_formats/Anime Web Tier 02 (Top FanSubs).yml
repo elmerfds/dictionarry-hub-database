@@ -4,9 +4,9 @@ tags:
 - Anime
 - WEB
 - FanSub
-specifications:
+conditions:
 - name: Anime Web Tier 02
-  required: true
   negate: false
-  fields:
-    value: \b(Anime Time|Commie|GJM|Kaleido-subs|Reaktor|SubDesu)\b
+  pattern: \b(Anime Time|Commie|GJM|Kaleido-subs|Reaktor|SubDesu)\b
+  required: true
+  type: release_title

@@ -15,4 +15,3 @@ conditions:
   pattern: \b(anime|ANiME)\b
   required: false
   type: release_title
-tests: []

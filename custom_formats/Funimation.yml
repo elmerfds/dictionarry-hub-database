@@ -9,4 +9,3 @@ conditions:
   pattern: \b(funimation|FUNI|funi)\b
   required: true
   type: release_title
-tests: []
