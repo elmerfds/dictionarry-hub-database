@@ -14,3 +14,4 @@ conditions:
   pattern: fansub|fansubbed|softsub|hardsub
   required: true
   type: release_title
+tests: []

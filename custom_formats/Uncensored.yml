@@ -9,3 +9,4 @@ conditions:
   pattern: uncensored|uncut
   required: true
   type: release_title
+tests: []

@@ -10,3 +10,4 @@ conditions:
   pattern: Funimation|AnimeLab|wakanim|HIDIVE|VRV|Aniplex
   required: true
   type: release_title
+tests: []

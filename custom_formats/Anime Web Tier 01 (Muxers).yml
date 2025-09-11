@@ -9,3 +9,4 @@ conditions:
   pattern: SubsPlease|Erai-raws|HorribleSubs|Yameii|kBaraka
   required: true
   type: release_title
+tests: []

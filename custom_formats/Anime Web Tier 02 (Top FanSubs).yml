@@ -10,3 +10,4 @@ conditions:
   pattern: Anime Time|Commie|GJM|Kaleido-subs|Reaktor|SubDesu
   required: true
   type: release_title
+tests: []

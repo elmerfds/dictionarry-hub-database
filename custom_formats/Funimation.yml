@@ -9,3 +9,4 @@ conditions:
   pattern: funimation|FUNI|funi
   required: true
   type: release_title
+tests: []

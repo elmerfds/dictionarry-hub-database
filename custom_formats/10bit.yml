@@ -9,3 +9,4 @@ conditions:
   pattern: 10.?bit|10bit|Hi10|Hi10P
   required: true
   type: release_title
+tests: []

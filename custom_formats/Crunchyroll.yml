@@ -9,3 +9,4 @@ conditions:
   pattern: crunchyroll|CR|crunchy
   required: true
   type: release_title
+tests: []
