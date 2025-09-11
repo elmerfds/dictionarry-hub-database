@@ -1,0 +1,157 @@
+name: Anime 1080p Max
+description: "Anime 1080p Max targets high-quality anime releases with **English dub priority** but falls back to original Japanese audio. \n- **Prioritizes English dub** but accepts original audio when dubs aren't available.\n- **Audio Priority**: English Dub > Japanese > Other languages.\n- **Video Priority**: Bluray-1080p (final upgrade) > WEB-DL > WEBRip.\n- **Low minimum threshold** to capture older anime releases that may have limited format options.\n- **Maximum 1080p** - no 2160p content to keep file sizes manageable."
+tags:
+- Anime
+- 1080p Max
+- English Dub Priority
+- Bluray Final
+- Low Threshold
+upgradesAllowed: true
+minCustomFormatScore: 100  # Very low threshold for older anime
+upgradeUntilScore: 400000
+minScoreIncrement: 1
+custom_formats:
+# Anime-specific release groups
+- name: Anime Tier 1 Groups
+  score: 150000
+- name: Anime Tier 2 Groups  
+  score: 140000
+- name: Anime Tier 3 Groups
+  score: 130000
+
+# Video quality formats (1080p max)
+- name: Bluray-1080p
+  score: 100000  # Final upgrade target
+- name: WEBDL-1080p
+  score: 80000
+- name: WEBRip-1080p
+  score: 70000
+- name: Bluray-720p
+  score: 50000   # For older anime
+- name: WEBDL-720p
+  score: 40000
+- name: WEBRip-720p
+  score: 35000
+
+# Audio priorities (English dub first, then audio format quality)
+- name: English Dub
+  score: 15000
+- name: Multi Audio
+  score: 12000   # English + Japanese
+- name: Japanese Audio
+  score: 8000    # Original fallback
+- name: English Audio
+  score: 7000
+- name: Other Audio
+  score: 2000
+
+# Audio formats (surround sound priority)
+- name: Dolby Atmos
+  score: 5000    # Highest audio format priority
+- name: DTS-HD MA
+  score: 4500    # DTS lossless surround
+- name: TrueHD
+  score: 4000    # Dolby lossless surround
+- name: Dolby Digital +
+  score: 3500    # Dolby surround
+- name: DTS-ES
+  score: 3000    # DTS surround
+- name: DTS
+  score: 2500    # Standard DTS surround
+- name: Dolby Digital
+  score: 2000    # Standard Dolby surround
+- name: AAC
+  score: 1000    # Fallback stereo
+
+# Subtitle considerations
+- name: Internal Subtitles
+  score: 1000
+- name: External Subtitles
+  score: 800
+
+# Streaming sources
+- name: Crunchyroll
+  score: 2000
+- name: Funimation
+  score: 2500   # Often has dubs
+- name: Netflix Anime
+  score: 1800
+- name: DSNP
+  score: 1500
+
+# Video encoding
+- name: x264
+  score: 500
+- name: x265/HEVC
+  score: 400
+
+# Avoid these (block 2160p and unwanted content)
+- name: Bluray-2160p
+  score: -999999  # Block all 2160p
+- name: WEBDL-2160p
+  score: -999999
+- name: WEBRip-2160p
+  score: -999999
+- name: Hardcoded Subs
+  score: -50000
+- name: Cam/TS
+  score: -999999
+- name: Banned Groups
+  score: -999999
+- name: Remux
+  score: -999999   # Too large for anime
+
+custom_formats_radarr:
+- name: English Dub
+  score: 15000
+- name: Multi Audio
+  score: 12000
+- name: Japanese Audio
+  score: 8000
+- name: Anime Movie Groups
+  score: 50000
+- name: Funimation
+  score: 2500
+- name: Crunchyroll
+  score: 2000
+
+custom_formats_sonarr:
+- name: English Dub
+  score: 15000
+- name: Multi Audio
+  score: 12000
+- name: Japanese Audio
+  score: 8000
+- name: Anime Release Groups
+  score: 50000
+- name: Season Pack
+  score: 50
+- name: Funimation
+  score: 2500
+- name: Crunchyroll
+  score: 2000
+
+qualities:
+- id: -11
+  name: Anime 1080p Max
+  description: Anime releases with 1080p maximum resolution, English dub priority, Bluray final upgrade
+  qualities:
+  - id: 7   # Bluray-1080p (final upgrade)
+    name: Bluray-1080p
+  - id: 9   # WEBDL-1080p  
+    name: WEBDL-1080p
+  - id: 11  # WEBRip-1080p
+    name: WEBRip-1080p
+  - id: 8   # Bluray-720p (for older content)
+    name: Bluray-720p
+  - id: 10  # WEBDL-720p
+    name: WEBDL-720p
+  - id: 12  # WEBRip-720p
+    name: WEBRip-720p
+
+upgrade_until:
+  id: 7     # Bluray-1080p (final upgrade target)
+  name: Bluray-1080p
+  description: Final upgrade target for anime content
+
+language: english_preferred_original_fallback
