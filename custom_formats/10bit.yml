@@ -1,0 +1,12 @@
+name: 10bit
+description: 10-bit color depth anime releases
+tags:
+- Anime
+- Video
+conditions:
+- name: 10bit
+  negate: false
+  pattern: \b(10.?bit|10bit|Hi10|Hi10P)\b
+  required: true
+  type: release_title
+tests: []

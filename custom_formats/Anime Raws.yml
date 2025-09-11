@@ -1,0 +1,17 @@
+name: Anime Raws
+description: Raw anime releases without subtitles
+tags:
+- Anime
+- Raw
+conditions:
+- name: Anime Raws
+  negate: false
+  pattern: \b(raw|raws|RAW|RAWS)\b
+  required: true
+  type: release_title
+- name: Not Fansub
+  negate: true
+  pattern: \b(fansub|fansubbed|softsub|hardsub)\b
+  required: true
+  type: release_title
+tests: []

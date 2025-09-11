@@ -1,5 +1,5 @@
 name: Anime 1080p Max
-description: "Anime 1080p Max targets high-quality anime releases with **English dub priority** but falls back to original Japanese audio. \n- **Prioritizes English dub** but accepts original audio when dubs aren't available.\n- **Audio Priority**: English Dub > Japanese > Other languages.\n- **Video Priority**: Bluray-1080p (final upgrade) > WEB-DL > WEBRip.\n- **Low minimum threshold** to capture older anime releases that may have limited format options.\n- **Maximum 1080p** - no 2160p content to keep file sizes manageable."
+description: "Anime 1080p Max targets high-quality anime releases with **English dub priority** and includes TRaSH Guide anime custom formats. \n- **Prioritizes English dub** via Dual Audio releases but accepts Japanese when dubs aren't available.\n- **Audio Priority**: Dual Audio (Eng+Jpn) > Dubs Only > Japanese > Surround Audio formats.\n- **Video Priority**: Anime BD Tiers > 1080p Bluray (final upgrade) > WEB-DL > WEBRip.\n- **Special Features**: 10-bit support, Uncensored preference, blocks Raw releases.\n- **Maximum 1080p** - blocks all 2160p content for manageable file sizes."
 tags:
 - Anime
 - 1080p Max
@@ -11,41 +11,43 @@ minCustomFormatScore: 100  # Very low threshold for older anime
 upgradeUntilScore: 400000
 minScoreIncrement: 1
 custom_formats:
-# Anime-specific release groups
-- name: Anime Tier 1 Groups
-  score: 150000
-- name: Anime Tier 2 Groups  
-  score: 140000
-- name: Anime Tier 3 Groups
-  score: 130000
+# Anime-specific release groups (TRaSH Guide based)
+- name: Anime BD Tier 01 (Top SeaDex Muxers)
+  score: 150000  # Top tier anime groups
+- name: Anime BD Tier 02 (SeaDex Muxers)
+  score: 140000  # Second tier anime groups
+- name: Anime BD Tier 03 (SeaDex Muxers)
+  score: 130000  # Third tier anime groups
+- name: Anime Web Tier 01 (Muxers)
+  score: 120000  # Top anime web muxers
+- name: Anime Web Tier 02 (Top FanSubs)
+  score: 110000  # Top anime fansub groups
+- name: Anime Web Tier 03 (Official Subs)
+  score: 105000  # Official anime streaming releases
 
-# Video quality formats (1080p max)
-- name: Bluray-1080p
+# Video quality formats (1080p max) - using actual custom format names
+- name: 1080p Bluray
   score: 100000  # Final upgrade target
-- name: WEBDL-1080p
+- name: 1080p WEB-DL
   score: 80000
-- name: WEBRip-1080p
+- name: 1080p WEBRip
   score: 70000
-- name: Bluray-720p
+- name: 720p Bluray
   score: 50000   # For older anime
-- name: WEBDL-720p
+- name: 720p WEB-DL
   score: 40000
-- name: WEBRip-720p
+- name: 720p WEBRip
   score: 35000
 
-# Audio priorities (English dub first, then audio format quality)
-- name: English Dub
-  score: 15000
-- name: Multi Audio
-  score: 12000   # English + Japanese
-- name: Japanese Audio
-  score: 8000    # Original fallback
-- name: English Audio
-  score: 7000
-- name: Other Audio
-  score: 2000
+# Language/Audio priorities (English dub preference)
+- name: Anime Dual Audio
+  score: 20000   # Highest - English + Japanese
+- name: Dubs Only
+  score: 15000   # English dub only
+- name: 10bit
+  score: 5000    # 10-bit video preference
 
-# Audio formats (surround sound priority)
+# Audio formats (surround sound priority) - using actual custom format names
 - name: Dolby Atmos
   score: 5000    # Highest audio format priority
 - name: DTS-HD MA
@@ -56,6 +58,8 @@ custom_formats:
   score: 3500    # Dolby surround
 - name: DTS-ES
   score: 3000    # DTS surround
+- name: DTS-HD HRA
+  score: 2800    # DTS high resolution
 - name: DTS
   score: 2500    # Standard DTS surround
 - name: Dolby Digital
@@ -63,94 +67,94 @@ custom_formats:
 - name: AAC
   score: 1000    # Fallback stereo
 
-# Subtitle considerations
-- name: Internal Subtitles
-  score: 1000
-- name: External Subtitles
-  score: 800
-
-# Streaming sources
-- name: Crunchyroll
-  score: 2000
+# Anime streaming sources - using actual custom format names
 - name: Funimation
-  score: 2500   # Often has dubs
-- name: Netflix Anime
-  score: 1800
+  score: 3000   # Often has English dubs
+- name: Crunchyroll
+  score: 2500   # Major anime streaming
 - name: DSNP
-  score: 1500
+  score: 2000   # Disney+ (anime content)
+- name: NF
+  score: 1800   # Netflix anime
+- name: HMAX
+  score: 1500   # HBO Max anime
+- name: MAX
+  score: 1500   # Max anime
 
-# Video encoding
+# Preferred features
+- name: Uncensored
+  score: 2000   # Prefer uncensored versions
+
+# Video encoding - using actual custom format names
 - name: x264
   score: 500
-- name: x265/HEVC
+- name: h265
   score: 400
 
 # Avoid these (block 2160p and unwanted content)
-- name: Bluray-2160p
+- name: 2160p
   score: -999999  # Block all 2160p
-- name: WEBDL-2160p
-  score: -999999
-- name: WEBRip-2160p
-  score: -999999
-- name: Hardcoded Subs
-  score: -50000
-- name: Cam/TS
-  score: -999999
+- name: UHD Bluray
+  score: -999999  # Block UHD content
+- name: 2160p Remux
+  score: -999999  # Block 2160p remux
+- name: Remux
+  score: -50000   # Discourage remux (too large for anime)
+- name: Anime Raws
+  score: -10000   # Discourage raw releases (no subs)
 - name: Banned Groups
   score: -999999
-- name: Remux
-  score: -999999   # Too large for anime
+- name: Full Disc
+  score: -999999
 
 custom_formats_radarr:
-- name: English Dub
-  score: 15000
-- name: Multi Audio
-  score: 12000
-- name: Japanese Audio
-  score: 8000
-- name: Anime Movie Groups
-  score: 50000
-- name: Funimation
-  score: 2500
-- name: Crunchyroll
+- name: AMZN
+  score: 1500
+- name: NF
   score: 2000
+- name: HMAX
+  score: 1800
+- name: MAX
+  score: 1800
+- name: DSNP
+  score: 2500
+- name: Special Edition
+  score: 1000
 
 custom_formats_sonarr:
-- name: English Dub
-  score: 15000
-- name: Multi Audio
-  score: 12000
-- name: Japanese Audio
-  score: 8000
-- name: Anime Release Groups
-  score: 50000
+- name: HMAX
+  score: 1800
+- name: MAX
+  score: 1800
+- name: AMZN
+  score: 1500
+- name: NF
+  score: 2000
+- name: DSNP
+  score: 2500
 - name: Season Pack
   score: 50
-- name: Funimation
-  score: 2500
-- name: Crunchyroll
-  score: 2000
 
 qualities:
-- id: -11
+- id: -12
   name: Anime 1080p Max
   description: Anime releases with 1080p maximum resolution, English dub priority, Bluray final upgrade
   qualities:
-  - id: 7   # Bluray-1080p (final upgrade)
+  - id: 10   # Bluray-1080p (final upgrade)
     name: Bluray-1080p
-  - id: 9   # WEBDL-1080p  
+  - id: 9    # WEBDL-1080p  
     name: WEBDL-1080p
-  - id: 11  # WEBRip-1080p
+  - id: 11   # WEBRip-1080p
     name: WEBRip-1080p
-  - id: 8   # Bluray-720p (for older content)
+  - id: 13   # Bluray-720p (for older content)
     name: Bluray-720p
-  - id: 10  # WEBDL-720p
+  - id: 14   # WEBDL-720p
     name: WEBDL-720p
-  - id: 12  # WEBRip-720p
+  - id: 15   # WEBRip-720p
     name: WEBRip-720p
 
 upgrade_until:
-  id: 7     # Bluray-1080p (final upgrade target)
+  id: 10    # Bluray-1080p (final upgrade target)
   name: Bluray-1080p
   description: Final upgrade target for anime content
 

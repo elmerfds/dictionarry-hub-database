@@ -1,0 +1,12 @@
+name: Uncensored
+description: Uncensored anime releases
+tags:
+- Anime
+- Content
+conditions:
+- name: Uncensored
+  negate: false
+  pattern: \b(uncensored|uncut)\b
+  required: true
+  type: release_title
+tests: []

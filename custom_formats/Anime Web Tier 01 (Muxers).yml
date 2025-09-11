@@ -1,0 +1,11 @@
+name: Anime Web Tier 01 (Muxers)
+description: Top tier anime web muxers and encoders
+tags:
+- Anime
+- WEB
+specifications:
+- name: Anime Web Tier 01
+  required: true
+  negate: false
+  fields:
+    value: \b(SubsPlease|Erai-raws|HorribleSubs|Yameii|kBaraka)\b

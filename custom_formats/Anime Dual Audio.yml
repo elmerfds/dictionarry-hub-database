@@ -1,0 +1,18 @@
+name: Anime Dual Audio
+description: Anime releases with both English and Japanese audio tracks
+tags:
+- Anime
+- Audio
+- Language
+conditions:
+- name: Dual Audio
+  negate: false
+  pattern: \b(dual.?audio|multi.?audio|eng.*jpn|jpn.*eng|english.*japanese|japanese.*english)\b
+  required: true
+  type: release_title
+- name: Anime Context
+  negate: false
+  pattern: \b(anime|ANiME)\b
+  required: false
+  type: release_title
+tests: []

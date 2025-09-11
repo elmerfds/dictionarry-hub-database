@@ -1,0 +1,12 @@
+name: Crunchyroll
+description: Crunchyroll streaming service releases
+tags:
+- Anime
+- Streaming
+conditions:
+- name: Crunchyroll
+  negate: false
+  pattern: \b(crunchyroll|CR|crunchy)\b
+  required: true
+  type: release_title
+tests: []
